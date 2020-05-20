@@ -1,3 +1,107 @@
 <html>
-	<h1 It works ></h1>
+
+<head>
+    <title>
+    pacman
+    </title>
+    <style>
+                    .road
+            {
+                position:relative;
+                width:70%;
+                border-top: 12px dotted black;
+                margin: 150px auto;
+            }
+            .pacman
+            {
+                position:absolute;
+                animation:walk 5s linear infinite ; 
+            }
+            .pacman::before, .pacman::after
+            {
+                content:"";
+                display: block;
+                height:0;
+                width:0;
+                position: absolute;
+                border: solid 30px RED;
+                border-radius: 50%;
+                top:-35px;
+
+
+            }
+            .pacman::before
+            {
+                border-right-color:transparent;
+                 border-bottom-color:transparent;
+                animation:radhu 0.5s linear infinite alternate; 
+            }
+
+            .pacman::after
+            {
+
+                border-right-color:transparent;
+                 border-top-color:transparent;
+                animation:sharma 0.5s linear infinite alternate; 
+            }
+            @keyframes walk
+            {
+                0%
+                {
+                    left:0%;
+                    transform: scaleX(1);
+                }
+                49%
+                {
+                    left:100%;
+                    transform: scaleX(1);
+                }
+                50%
+                {
+                    transform: scaleX(-1);
+                }
+                100%
+                {
+                    left:0%;
+                    transform: scaleX(-1);
+                }
+            }
+            @keyframes radhu
+            {
+                0%
+                {
+                    transform: rotate(0deg);
+                }
+                100%
+                {
+                    transform: rotate(40deg);
+
+                }
+            }
+                @keyframes sharma
+            {
+                0%
+                {
+                    transform: rotate(4deg);
+                }
+                100%
+                {
+                    transform: rotate(-40deg);
+                }
+
+
+            }
+
+    
+    
+    </style> 
+</head>
+    <body>
+        <div class="road">
+            <div class="pacman">
+            </div>
+            
+        </div>
+    
+    </body>
 </html>
